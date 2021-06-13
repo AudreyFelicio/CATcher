@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, isDevMode } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { ElectronService } from './core/services/electron.service';
 import { AppConfig } from '../environments/environment';
 import { fromEvent, merge, Observable, of } from 'rxjs';
@@ -12,7 +12,6 @@ import { LoggingService } from './core/services/logging.service';
 })
 export class AppComponent implements AfterViewInit {
   isNetworkOnline$: Observable<boolean>;
-  isDevMode = isDevMode();
 
   constructor(public electronService: ElectronService, logger: LoggingService) {
 

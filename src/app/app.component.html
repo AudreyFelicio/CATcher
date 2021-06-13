@@ -3,10 +3,6 @@
   <p *ngIf="!(isNetworkOnline$ | async)">You are not connected to internet.</p>
 </div>
 
-<div>
-  <p *ngIf="isDevMode">This runs in development mode.</p>
-</div>
-
 <div class="container">
   <router-outlet></router-outlet>
 </div>

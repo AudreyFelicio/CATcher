@@ -27,8 +27,8 @@
     Log
     <mat-icon>receipt</mat-icon>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>View Log</button>
-      <button mat-menu-item>Download Log</button>
+      <button mat-menu-item (click)="this.viewLog()">View Log</button>
+      <button mat-menu-item (click)="this.loggingService.exportLogFile()">Download Log</button>
     </mat-menu>
   </button>
   <button *ngIf="auth.isAuthenticated() && !isDevMode" mat-button matTooltip="Download CATcher Log" (click)="this.loggingService.exportLogFile()">

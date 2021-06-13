@@ -103,6 +103,10 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  viewLog() {
+    this.router.navigateByUrl('/logView');
+  }
+
   viewBrowser() {
     const routerUrl = this.router.url.substring(1); // remove the first '/' from string
     const issueUrlIndex = routerUrl.indexOf('/'); // find the index of second '/'

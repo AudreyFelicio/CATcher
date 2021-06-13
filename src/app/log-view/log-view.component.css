@@ -1,0 +1,17 @@
+span {
+  white-space: pre-wrap;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+}
+
+.download-button {
+  border: 1px solid currentColor;
+  margin: 0 20px;
+  height: 38px;
+  margin-top: 1.34em;
+  margin-bottom: 1.34em;
+  font-size: 1em;
+}

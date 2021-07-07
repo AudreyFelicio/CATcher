@@ -39,13 +39,15 @@ import { LoggingService } from './core/services/logging.service';
 import { IssueServiceFactory } from './core/services/factories/factory.issue.service';
 import { PermissionService } from './core/services/permission.service';
 import { markedOptionsFactory } from './shared/lib/marked';
+import { LogViewComponent } from './log-view/log-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     UserConfirmationComponent,
-    SessionFixConfirmationComponent
+    SessionFixConfirmationComponent,
+    LogViewComponent
   ],
   imports: [
     BrowserModule,

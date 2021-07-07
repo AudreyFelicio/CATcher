@@ -1,0 +1,5 @@
+<div class="title">
+  <h1>CATcher Log</h1>
+  <button mat-stroked-button color="primary" class="download-button" (click)="this.logger.exportLogFile()">Download</button>
+</div>
+<span>{{this.logger.getCachedLog()}}</span>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, isDevMode, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { AuthService } from '../../core/services/auth.service';
 import { PhaseService, PhaseDescription } from '../../core/services/phase.service';
@@ -26,6 +26,7 @@ export class HeaderComponent implements OnInit {
   TUTORIAL_LABEL = '+label:tutorial.';
   TEAM_LABEL = '+label:team.';
   EXCLUDE_DUPLICATE = '+-label:duplicate'; // exclude duplicate issues
+  isDevMode = isDevMode();
 
   constructor(private router: Router,
               public auth: AuthService,
@@ -100,6 +101,10 @@ export class HeaderComponent implements OnInit {
     } else {
       this.location.back();
     }
+  }
+
+  viewLog() {
+    this.router.navigateByUrl('/logView');
   }
 
   viewBrowser() {

@@ -23,7 +23,15 @@
   </div>
 
   <span style="flex: 1 1 auto"></span>
-  <button *ngIf="auth.isAuthenticated()" mat-button matTooltip="Download CATcher Log" (click)="this.loggingService.exportLogFile()">
+  <button *ngIf="isDevMode" mat-button matTooltip="View Log Options" [matMenuTriggerFor]="menu">
+    Log
+    <mat-icon>receipt</mat-icon>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="this.viewLog()">View Log</button>
+      <button mat-menu-item (click)="this.loggingService.exportLogFile()">Download Log</button>
+    </mat-menu>
+  </button>
+  <button *ngIf="auth.isAuthenticated() && !isDevMode" mat-button matTooltip="Download CATcher Log" (click)="this.loggingService.exportLogFile()">
     Download Log
     <mat-icon>receipt</mat-icon>
   </button>
